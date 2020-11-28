@@ -1,0 +1,27 @@
+.post {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 0px 0px 20px;
+}
+
+.category {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  padding: 8px 15px;
+  border-radius: 15px;
+
+  &.activity {
+    background-color: #9013FE;
+  }
+
+  &.business {
+    background-color: #4A90E2;
+  }
+
+  &.cause {
+    color: black;
+    background-color: #F5A623;
+  }
+}

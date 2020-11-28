@@ -1,0 +1,13 @@
+<% @posts.each do |post| %>
+  <div class="post">
+    <h3><%= link_to post.title, category_show_path(category: post.category.pluralize, id: post.id ) %></h3>
+    <span class="category <%= post.category %>"><%= post.category %></span>
+    <p><%= post.body %></p>
+
+    <% if post.link.present? %>
+      <p>Find out more at <a href="<%= post.link %>" target="_blank"><%= post.link %></a></p>
+    <% end %>
+
+    <p>Suggested by <a href="https://twitter.com/colinloretz" target="_blank">@colinloretz</a>, <%= time_ago_in_words(post.created_at) %> ago</p>
+  </div>
+<% end %>

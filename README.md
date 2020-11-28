@@ -58,3 +58,22 @@ Focus on the following topics:
   - Body
   - Link
   - Photo
+
+
+***
+### Stream Notes 11/27
+
+- [ ] Allow someone to submit an idea with their name & link back to them
+- [ ] If we created users, it would be easier to allow them to submit ideas
+- [ ] Twitter login?
+- [ ] See what suggestions other users are making
+- [ ] Let a user mark "I did this" or "I want to do this" - favorites/bookmarks
+- [ ] Fix the suggestion issue: "Tell me what to do now"
+- [ ] "Randomize" - Roll the dice and get an activity
+
+
+### Stream Notes 11/28 @ 6pm PST
+
+
+
+### Stream Notes 11/29 @ 6pm PST

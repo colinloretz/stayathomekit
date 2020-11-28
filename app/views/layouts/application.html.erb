@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>#StayHomeBeCreative</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="logo">#StayHomeBeCreative</h1>
+        <p>Help flatten the curve of covid-19 by staying at home with some of these activities, shop a local business or support a cause in need.</p>
+        <ul id="navigation">
+          <li><%= link_to "Home", root_path %></li>
+          <li><%= link_to "Be Creative", display_category_path(category: "activities") %></li>
+          <li><%= link_to "Shop Local", display_category_path(category: "businesses") %></li>
+          <li><%= link_to "Donate Local", display_category_path(category: "causes") %></li>
+        </ul>
+      </header>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>
