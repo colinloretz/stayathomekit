@@ -93,3 +93,22 @@ Goals for 11/29
 - [ ] Launch this to Heroku
 - [ ] Domain.... stayhomebecreative.com
 - [ ] Add things to do anywhere or near you
+
+
+
+#### Stretch Goals
+- [ ] Suggestion screen (pick something for me!)
+      - Do you want to do something, buy something, or donate something?
+      - javascript + rails
+- [ ] Go back & add Tailwind the right way
+
+#### Super Stretch Goals
+- [ ] Allow users to create an account
+      - Allow Twitter only
+      - Allow them to pledge and tweet (see pledge form)
+      https://www.scribemind.com/stay-home-be-creative
+- [ ] covid news/all in one place
+- [ ] Custom covid tracker
+      - # of pledged creatives  
+      - # of days stayed home  
+      - pledged * days = aggregate days stayed home  
