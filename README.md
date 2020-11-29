@@ -74,6 +74,22 @@ Focus on the following topics:
 
 ### Stream Notes 11/28 @ 6pm PST
 
-
+11/28 Goals  
+- [|] Add TailwindCSS using cdn
+- [|] Clean up our UI a little bit
+- [|] Allow users to submit activities/businesses/causes
+- [ ] Add more fields for each post category
+      - Business:   
+        curbside (t/f)  
+        online store (link)  
+        address (geocode)  
+        type: bar, restaurant, coffee/bakery, shop, fitness, small business  
 
 ### Stream Notes 11/29 @ 6pm PST
+Goals for 11/29  
+- [ ] finish submission
+- [ ] Add an about page + footer
+- [ ] Link to the pledge page
+- [ ] Launch this to Heroku
+- [ ] Domain.... stayhomebecreative.com
+- [ ] Add things to do anywhere or near you
