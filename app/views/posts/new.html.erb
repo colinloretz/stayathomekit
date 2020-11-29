@@ -1,0 +1,13 @@
+<h2>Submit a new activity, business or cause</h2>
+
+<%= form_with model: @post, class: "form" do |f| %>
+  <div>
+    <%= label_tag(:title, "Title") %>
+    <%= f.text_field :title %>
+  </div>
+  <div>
+    <%= label_tag(:body, "Tell us more") %> <br />
+    <%= f.text_area :body, size: "60x12" %>
+  </div>
+  <%= f.submit "Submit Activity" %>
+<% end %>

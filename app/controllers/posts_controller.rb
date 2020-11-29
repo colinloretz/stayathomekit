@@ -17,9 +17,16 @@ class PostsController < ApplicationController
 
   def new
     # this displays the new screen to the user
+    @post = Post.new
   end
 
   def create
+    @post = Post.new(post_params)
+    if @post.save
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def edit
@@ -41,6 +48,9 @@ class PostsController < ApplicationController
     render :index
   end
 
-# TODO: permitted params
+private
 
+  def post_params
+    params.require(:post).permit(:title, :body, :category, :link)
+  end
 end

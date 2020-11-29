@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   root to: 'posts#index'
+  resources :posts
+  get '/submit', to: 'posts#new', as: 'submission'
   get '/:category', to: 'posts#display_category', as: 'display_category'
   get '/:category/:id', to: 'posts#show', as: "category_show"
-  resources :posts
+
 
   # GET
   # index     /posts
