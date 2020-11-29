@@ -5,20 +5,21 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <div class="container">
-      <header>
-        <h1 id="logo">#StayHomeBeCreative</h1>
-        <p>Help flatten the curve of covid-19 by staying at home with some of these activities, shop a local business or support a cause in need.</p>
-        <ul id="navigation">
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Be Creative", display_category_path(category: "activities") %></li>
-          <li><%= link_to "Shop Local", display_category_path(category: "businesses") %></li>
-          <li><%= link_to "Donate Local", display_category_path(category: "causes") %></li>
+  <body class="bg-gray-100">
+    <div class="max-w-2xl mx-auto m-5">
+      <header class="flex flex-col">
+        <h1 class="flex text-purple-600 font-bold justify-center p-5 text-4xl">#StayHomeBeCreative</h1>
+        <p class="text-sm text-center">Help flatten the curve of covid-19 by staying at home with some of these activities, shop a local business or support a cause in need.</p>
+        <ul class="flex justify-between text-gray-800 m-6 font-bold">
+          <li><%= link_to "Home", root_path, class: "hover:text-purple-700" %></li>
+          <li><%= link_to "Be Creative", display_category_path(category: "activities"), class: "text-green-600 hover:text-gray-800" %></li>
+          <li><%= link_to "Shop Local", display_category_path(category: "businesses"), class: "text-blue-600 hover:text-gray-800" %></li>
+          <li><%= link_to "Donate Local", display_category_path(category: "causes"), class: "text-pink-600 hover:text-gray-800" %></li>
         </ul>
       </header>
 
