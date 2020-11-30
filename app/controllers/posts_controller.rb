@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   def index
     # usually this is a list of all the posts
     # TODO: add sorting, ordering, filters, etc.
-    @posts = Post.all
+    @posts = Post.approved
   end
 
   def show
@@ -43,7 +43,7 @@ class PostsController < ApplicationController
   end
 
   def display_category
-    @posts = Post.where(category: params[:category].singularize)
+    @posts = Post.approved.where(category: params[:category].singularize)
     # TODO: error handling
     render :index
   end
@@ -51,6 +51,12 @@ class PostsController < ApplicationController
 private
 
   def post_params
-    params.require(:post).permit(:title, :body, :category, :link)
+    params.require(:post).permit(
+      :title,
+      :body,
+      :category,
+      :link,
+      :submitted_by_name
+    )
   end
 end
