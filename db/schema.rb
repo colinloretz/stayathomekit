@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_28_023108) do
+ActiveRecord::Schema.define(version: 2020_11_30_025201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 2020_11_28_023108) do
     t.integer "category", default: 0
     t.text "body", default: ""
     t.text "link", default: ""
+    t.boolean "approved", default: false
+    t.string "submitted_by_name", default: ""
   end
 
 end
