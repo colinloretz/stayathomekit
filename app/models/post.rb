@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
-  scope :approved, -> { where(approved: true) }
-  scope :unapproved, -> { where(approved: false) }
+  scope :approved, -> { where(approved: true).order(created_at: :DESC) }
+  scope :unapproved, -> { where(approved: false).order(created_at: :DESC) }
 
   # TODO: validate url format
   validates :title, presence: true
