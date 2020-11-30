@@ -61,6 +61,7 @@ Focus on the following topics:
 
 
 ***
+
 ### Stream Notes 11/27
 
 - [ ] Allow someone to submit an idea with their name & link back to them
@@ -71,6 +72,7 @@ Focus on the following topics:
 - [ ] Fix the suggestion issue: "Tell me what to do now"
 - [ ] "Randomize" - Roll the dice and get an activity
 
+***
 
 ### Stream Notes 11/28 @ 6pm PST
 
@@ -85,24 +87,14 @@ Focus on the following topics:
         address (geocode)  
         type: bar, restaurant, coffee/bakery, shop, fitness, small business  
 
-### Stream Notes 11/29 @ 6pm PST
-Goals for 11/29  
-- [ ] finish submission
-- [ ] Add an about page + footer
-- [ ] Link to the pledge page
-- [ ] Launch this to Heroku
-- [ ] Domain.... stayhomebecreative.com
-- [ ] Add things to do anywhere or near you
 
-
-
-#### Stretch Goals
+#### Stretch Goals as defined on 11/28
 - [ ] Suggestion screen (pick something for me!)
       - Do you want to do something, buy something, or donate something?
       - javascript + rails
 - [ ] Go back & add Tailwind the right way
 
-#### Super Stretch Goals
+#### Super Stretch Goals as defined on 11/28
 - [ ] Allow users to create an account
       - Allow Twitter only
       - Allow them to pledge and tweet (see pledge form)
@@ -112,3 +104,31 @@ Goals for 11/29
       - # of pledged creatives  
       - # of days stayed home  
       - pledged * days = aggregate days stayed home  
+
+***
+
+### Stream Notes 11/29 @ 6pm PST
+Goals for 11/29  
+11/29 Goals
+- [x] Hook up our domain
+- [x] Add ssl
+- [x] Launch to heroku
+- [x] Add approval to post object
+      - x boolean, default: false
+      - x admin will be able to toggle
+      - x Only shows posts where approved: true
+      - x Add a scope to Post model to do this
+- [x] Add name for user that suggested the post
+- [x] Finish the submission screen
+
+### Outstanding TODOS
+- [ ] Add automatic rake db:migrate to our deploy for heroku
+- [ ] Add errors if failed to save new submission
+- [ ] Add a flash message that your submission is awaiting approval and will show up shortly
+- [ ] Add an about page + footer
+    - [ ] Link to the existing pledge page https://www.scribemind.com/stay-home-be-creative
+
+### Stretch Goals for the Future
+- When someone marks something as "done" and its a business or a nonprofit, prompt for how much they spent
+- Number of pledged users x Number of days stayed at home (how do we collect this?)
+- Dollars supported
