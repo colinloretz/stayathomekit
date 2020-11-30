@@ -5,6 +5,7 @@ class Post < ApplicationRecord
   # TODO: validate url format
   validates :title, presence: true
   validates :body, presence: true
+  validates :submitted_by_name, presence: true
 
   enum category: {
     activity: 0,

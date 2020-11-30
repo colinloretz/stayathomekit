@@ -3,8 +3,11 @@
    <h3 class="text-xl font-bold"><%= @post.title %></h3>
  </div>
 
-<p class="text-xs">Suggested by <a class="text-purple-600 hover:text-purple-900" href="https://twitter.com/colinloretz" target="_blank">@colinloretz</a>, <%= time_ago_in_words(@post.created_at) %> ago</p>
-
+ <% if @post.submitted_by_name.blank? %>
+   <p class="text-xs mt-3">Suggested by <span class="text-purple-500 hover:text-purple-900">a fellow #StayHomeBeCreative member</span>, <%= time_ago_in_words(@post.created_at) %> ago</p>
+ <% else %>
+   <p class="text-xs mt-3">Suggested by <span class="text-purple-500 hover:text-purple-900"><%= @post.submitted_by_name %></span>, <%= time_ago_in_words(@post.created_at) %> ago</p>
+ <% end %>
 <p class="my-5"><%= @post.body %></p>
 
 <% if @post.link.present? %>

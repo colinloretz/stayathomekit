@@ -1,25 +1,27 @@
-<h2>Submit a new activity, business or cause</h2>
-
-<%= form_with model: @post, class: "form" do |f| %>
-  <div>
-    <%= label_tag(:submitted_by_name, "Your Name") %>
-    <%= f.text_field :submitted_by_name %>
-  </div>
-  <div>
-    <%= label_tag(:title, "Title") %>
-    <%= f.text_field :title %>
-  </div>
-  <div>
-    <%= label_tag(:category, "Category") %>
-    <%= select_tag "people", options_for_select(Post.categories.map {|k, v| [k.humanize.capitalize, v]}) %>
-  </div>
-  <div>
-    <%= label_tag(:link, "Link to participate/shop/donate:") %>
-    <%= f.text_field :link %>
-  </div>
-  <div>
-    <%= label_tag(:body, "Tell us more about how to participate/shop/donate:") %> <br />
-    <%= f.text_area :body, size: "60x12" %>
-  </div>
-  <%= f.submit "Submit Activity" %>
-<% end %>
+<hr />
+<div class="flex justify-center flex-col max-w-md mx-auto mt-5">
+  <h2 class="text-xl font-bold mb-5 text-green-600">Submit a new activity, business or cause</h2>
+  <%= form_with model: @post, class: "form" do |f| %>
+    <div class="mb-5 flex flex-col">
+      <%= label_tag(:submitted_by_name, "Your Name", class:"font-bold") %>
+      <%= f.text_field :submitted_by_name, class: "p-2" %>
+    </div>
+    <div class="mb-5 flex flex-col">
+      <%= label_tag(:title, "Title", class:"font-bold") %>
+      <%= f.text_field :title, class: "p-2" %>
+    </div>
+    <div class="mb-5 flex flex-col">
+      <%= label_tag(:category, "Category", class:"font-bold") %>
+      <%= select_tag "people", options_for_select(Post.categories.map {|k, v| [k.humanize.capitalize, v]}), class: "py-2 px-2" %>
+    </div>
+    <div class="mb-5 flex flex-col">
+      <%= label_tag(:link, "Link to participate/shop/donate:", class:"font-bold") %>
+      <%= f.text_field :link, class: "p-2" %>
+    </div>
+    <div class="mb-5 flex flex-col">
+      <%= label_tag(:body, "Tell us more about how to participate/shop/donate:", class:"font-bold") %>
+      <%= f.text_area :body, class: "w-full h-20 p-2" %>
+    </div>
+    <%= f.submit "Submit Activity", class: "bg-green-600 text-white py-3 px-5 rounded-xl" %>
+  <% end %>
+</div>
