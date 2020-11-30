@@ -12,5 +12,12 @@ class Post < ApplicationRecord
     cause: 2
   }
 
+  def approve!
+    if self.update(approved: true)
+      puts "Approved #{self.title}"
+    else
+      puts "Error approving this submission"
+    end
+  end
 
 end
